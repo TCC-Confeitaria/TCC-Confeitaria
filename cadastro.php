@@ -20,29 +20,68 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro - Confeitaria</title>
-    <style>
-        body { font-family: sans-serif; background: #fff0f3; display: flex; justify-content: center; padding: 20px; }
-        form { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
-        input { width: 100%; padding: 8px; margin: 5px 0; box-sizing: border-box; border: 1px solid #ddd; }
-        button { width: 100%; padding: 10px; background: #d81b60; color: white; border: none; cursor: pointer; margin-top: 10px; }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <form method="POST">
-        <h2>Criar Conta 🧁</h2>
-        <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>"; ?>
-        <input type="text" name="nome" placeholder="Nome Completo" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <input type="text" name="telefone" placeholder="Telemóvel">
-        <input type="date" name="data_nasc" required>
-        <input type="text" name="cpf" placeholder="CPF">
-        <h4>Endereço</h4>
-        <input type="text" name="rua" placeholder="Rua">
-        <input type="text" name="numero" placeholder="Nº">
-        <input type="text" name="bairro" placeholder="Bairro">
-        <input type="text" name="cidade" placeholder="Cidade">
-        <button type="submit">Finalizar Cadastro</button>
-    </form>
+    <?php include 'cabecalho.php'; ?>
+    <main class="conteudo-principal">
+        <div class="box">
+                <h1>Criar Conta</h1>
+                <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>"; ?>
+            <form method="POST">
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser"required>
+                    <label for="nome" class="labelInput">Nome Completo</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser"required>
+                    <label for="email" class="labelInput">E-mail</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser"required>
+                    <label for="senha" class="labelInput">Senha</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="telefone" id="telefone" class="inputUser"required>
+                    <label for="telefone" class="labelInput">Telemóvel</label>
+                </div>
+                <br>
+                <label for="data_nasc" class="labelDataNasc">Data de Nascimento</label>
+                <input type="date" name="data_nasc" id="data_nasc" required>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <label for="cpf" class="labelInput">CPF</label>
+                </div>
+                <br>
+                <h4>Endereço</h4>
+                <div class="inputBox">
+                    <input type="text" name="rua" id="rua" class="inputUser" required>
+                    <label for="rua" class="labelInput">Rua</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="numero" id="numero" class="inputUser" required>
+                    <label for="numero" class="labelInput">Nº</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="bairro" id="bairro" class="inputUser" required>
+                    <label for="bairro" class="labelInput">Bairro</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cidade</label>
+                </div>
+                <br>
+                <button type="submit" class="btn">Finalizar Cadastro</button>
+            </form>
+            <p><a href="login.php">Já tem conta? Faça login aqui</a></p>
+        </div>
+    </main>
 </body>
 </html>
