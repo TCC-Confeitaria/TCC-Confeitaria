@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <?php include 'cabecalho.php'; ?>
-<main class="conteudo-principal">
+<?php include 'cabecalho.php'; ?>
+<main class="conteudo-principal home">
         <div class="texto">
             <h1>Nossa Doce História</h1>
             <p>Tudo começou com nossa fundadora, Raquel Martins Cardoso, na pequena cozinha de sua casa, onde o amor se transformava em doces e salgados</p>

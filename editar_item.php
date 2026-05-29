@@ -107,17 +107,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST" enctype="multipart/form-data">
                 
                 <div class="inputBox">
-                    <input type="text" name="nome" class="inputUser" value="<?php echo htmlspecialchars($item['nome']); ?>" required>
+                    <input type="text" name="nome" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($item['nome']); ?>" required>
                     <label class="labelInput">Nome do Doce</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="descricao" class="inputUser" value="<?php echo htmlspecialchars($item['descricao']); ?>" required>
+                    <input type="text" name="descricao" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($item['descricao']); ?>" required>
                     <label class="labelInput">Descrição</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="number" step="0.01" name="preco" class="inputUser" value="<?php echo $item['preco']; ?>" required>
+                    <input type="number" step="0.01" name="preco" class="inputUser" placeholder=" " value="<?php echo $item['preco']; ?>" required>
                     <label class="labelInput">Preço (R$)</label>
                 </div>
                 <br>

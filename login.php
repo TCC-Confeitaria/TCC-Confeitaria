@@ -16,8 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['usuario_id'] = $user['id'];
         $_SESSION['usuario_nome'] = $user['nome'];
         $_SESSION['usuario_tipo'] = $user['tipo'];
-        
-        // APAGUE O IF/ELSE ANTIGO E DEIXE APENAS ISSO:
         header("Location: index.php");
         exit;
     }
@@ -40,15 +38,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>"; ?>
             <form method="POST">
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <input type="text" name="email" id="email" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($email ?? ''); ?>" required>
                     <label for="email" class="labelInput">E-mail</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <input type="password" name="senha" id="senha" class="inputUser" placeholder=" " required>
                     <label for="senha" class="labelInput">Senha</label>
                 </div>
-                <br>
                 <br>
                 <button type="submit" class="btn">Entrar</button>
             </form>

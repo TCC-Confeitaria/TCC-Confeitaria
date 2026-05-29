@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     if ($cliente->salvarNoBanco()) {
-        echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='index.php';</script>";
+        echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='login.php';</script>";
     } else {
         $erro = "Erro ao cadastrar. O e-mail pode já estar em uso.";
     }
@@ -30,51 +30,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if(isset($erro)) echo "<p style='color:red'>$erro</p>"; ?>
             <form method="POST">
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser"required>
+                    <input type="text" name="nome" id="nome" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['nome'] ?? ''); ?>" required>
                     <label for="nome" class="labelInput">Nome Completo</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser"required>
+                    <input type="text" name="email" id="email" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>" required>
                     <label for="email" class="labelInput">E-mail</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser"required>
+                    <input type="password" name="senha" id="senha" class="inputUser" placeholder=" " required>
                     <label for="senha" class="labelInput">Senha</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="telefone" id="telefone" class="inputUser"required>
+                    <input type="text" name="telefone" id="telefone" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['telefone'] ?? ''); ?>" required>
                     <label for="telefone" class="labelInput">Telemóvel</label>
                 </div>
                 <br>
                 <label for="data_nasc" class="labelDataNasc">Data de Nascimento</label>
-                <input type="date" name="data_nasc" id="data_nasc" required>
+                <input type="date" name="data_nasc" id="data_nasc" value="<?php echo htmlspecialchars($_POST['data_nasc'] ?? ''); ?>" required>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['cpf'] ?? ''); ?>" required>
                     <label for="cpf" class="labelInput">CPF</label>
                 </div>
                 <br>
                 <h4>Endereço</h4>
                 <div class="inputBox">
-                    <input type="text" name="rua" id="rua" class="inputUser" required>
+                    <input type="text" name="rua" id="rua" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['rua'] ?? ''); ?>" required>
                     <label for="rua" class="labelInput">Rua</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="numero" id="numero" class="inputUser" required>
+                    <input type="text" name="numero" id="numero" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['numero'] ?? ''); ?>" required>
                     <label for="numero" class="labelInput">Nº</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="bairro" id="bairro" class="inputUser" required>
+                    <input type="text" name="bairro" id="bairro" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['bairro'] ?? ''); ?>" required>
                     <label for="bairro" class="labelInput">Bairro</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <input type="text" name="cidade" id="cidade" class="inputUser" placeholder=" " value="<?php echo htmlspecialchars($_POST['cidade'] ?? ''); ?>" required>
                     <label for="cidade" class="labelInput">Cidade</label>
                 </div>
                 <br>

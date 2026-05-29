@@ -20,8 +20,8 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <?php include 'cabecalho.php'; ?>
-    <main class="conteudo-principal">
-        <div class="box2">
+    <main class="conteudo-principal flex-col">
+        <div class="box2 box2-compact box2-left">
             <h1>Painel Administrativo</h1>
             <p>Bem-vindo, <b><?php echo $_SESSION['usuario_nome']; ?></b>!</p>
             <h3>Lista de Utilizadores Registados no Banco de Dados:</h3>

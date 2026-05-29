@@ -6,6 +6,12 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Verifica o tipo de usuário logado (se não houver ninguém, assume que é um visitante/deslogado)
 $tipo_usuario = isset($_SESSION['usuario_tipo']) ? $_SESSION['usuario_tipo'] : 'visitante';
+$cartCount = 0;
+if (!empty($_SESSION['carrinho']) && is_array($_SESSION['carrinho'])) {
+    foreach ($_SESSION['carrinho'] as $item) {
+        $cartCount += isset($item['quantidade']) ? (int) $item['quantidade'] : 0;
+    }
+}
 ?>
 
 <header class="cabecalho">
@@ -19,7 +25,7 @@ $tipo_usuario = isset($_SESSION['usuario_tipo']) ? $_SESSION['usuario_tipo'] : '
         <?php if ($tipo_usuario !== 'admin'): ?>
             <a href="index.php">Início</a>
             <a href="cardapio.php">Cardápio</a>
-            <a href="carrinho.php">Carrinho</a>
+            <a href="carrinho.php">Carrinho<?php echo $cartCount ? ' (' . $cartCount . ')' : ''; ?></a>
         <?php endif; ?>
 
         <?php if ($tipo_usuario === 'admin'): ?>
