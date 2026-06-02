@@ -33,7 +33,7 @@ CREATE TABLE `itens_cardapio` (
   `categoria` varchar(100) NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'ativo',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `itens_cardapio` (
 
 LOCK TABLES `itens_cardapio` WRITE;
 /*!40000 ALTER TABLE `itens_cardapio` DISABLE KEYS */;
-INSERT INTO `itens_cardapio` VALUES (1,'Ovo trufado','sdasdsadsa',50.00,'6a0abc73238bf.png','Ovos de Páscoa','ativo'),(3,'dasdsadsa','asdasdsad',9.98,'6a17b9f391271.jpeg','asdsad','ativo'),(4,'asdasdsadasdas','ssdssssdsaaa',60.00,'6a17ba0aca6a7.jpg','asdsad','ativo');
+INSERT INTO `itens_cardapio` VALUES (5,'Copo Surpresa de Morango','Delicioso copo da felicidade com camadas de brigadeiro e creme de chocolate branco, além de uma geléia de morango que traz o equilíbrio entre a doçura e a acidez',19.99,'6a1e29662a3e4.jpg','Copos da Felicidade','ativo'),(6,'Cento de Docinhos - (Somente 2 sabores)','Os queridinhos de qualquer festa, nosso cento dois sabores conta com os clássicos brigadeiro(50 unidades) e beijinho(50 unidades), ideias para agradar qualquer um!',80.00,'6a1e2a957be58.jpg','Festa','ativo'),(7,'Meio Cento de Docinhos - (Somente 2 sabores)','Os queridinhos de qualquer festa, nosso cento dois sabores conta com os clássicos brigadeiro(25 unidades) e beijinho(25 unidades), ideias para agradar qualquer um!',40.00,'6a1e2ad47032d.jpg','Festa','ativo'),(8,'Cento de Salgados','Os queridinhos de qualquer festa, nosso cento de salgados conta com sabores variados, ideias para agradar qualquer um!',90.00,'6a1e3176f399f.jpg','Festa','ativo'),(9,'Torta de Limão','A nossa Torta de Limão é o clássico que nunca falha. Combinamos uma massa leve e crocante com um recheio cremoso e aveludado de limão, que traz o azedinho na medida exata. Para finalizar com chave de ouro, uma generosa camada de chantilly',50.00,'6a1e321972f7b.jpg','Tortas','ativo'),(10,'Torta de Morango','Para os apaixonados por doçura e frescor, a nossa Torta de Morango é um verdadeiro espetáculo. Ela traz uma base crocante e amanteigada, recheada com um creme de confeiteiro suave e baunilhado. Por cima, uma cobertura farta de morangos frescos, selecionados e brilhantes, finalizados com uma leve geleia de brilho artesanal.',50.00,'6a1e3261c99b6.jpg','Tortas','ativo');
 /*!40000 ALTER TABLE `itens_cardapio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,4 +90,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-29 21:07:55
+-- Dump completed on 2026-06-01 22:36:25
